@@ -17,6 +17,7 @@ mongoose
   .connect(process.env.MONGO_URL)
   .then(() => {
     // connection succeeded
+    console.log('Connection Established')
   })
   .catch((err) => {
     // handle error
@@ -162,7 +163,7 @@ wss.on('connection', (connection, req) => {
       clearInterval(connection.timer)
       connection.terminate()
       notifyAboutOnlinePeople()
-      console.log('death')
+      //console.log('death')
     }, 2000)
   }, 3000)
 
